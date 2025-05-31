@@ -5,7 +5,7 @@
   gap: 16px;;
 }
 .content {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   flex: 1;
   margin-right: 16px;
 }

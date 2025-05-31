@@ -22,7 +22,7 @@ export default function LeftBar() {
         
       </div>
       <a href="/" className='menuIcon'>
-          <img src="/general/messages.svg" alt="Logo" />
+          <img src="/general/settings.svg" alt="Logo" />
       </a>
     </div>
   )
