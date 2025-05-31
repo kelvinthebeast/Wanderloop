@@ -1,0 +1,89 @@
+/* .collections {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 16px;
+}
+
+.collection {
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.collectionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.collectionInfo h1 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.collectionInfo span {
+
+  color: gray;
+  font-size: 13px;
+ 
+} */
+
+/* collections.css */
+
+.collections {
+  width: 100%;
+  display: grid;
+  /* Sử dụng `auto-fit` và `minmax` để tạo số cột linh hoạt */
+  /* Mỗi cột sẽ có chiều rộng tối thiểu 200px (có thể điều chỉnh) và tối đa 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0 20px; /* Thêm padding ngang để nội dung không bị dính vào mép */
+  box-sizing: border-box; /* Đảm bảo padding không làm tràn width */
+}
+
+.collection {
+  margin-bottom: 32px; /* Khoảng cách giữa các hàng */
+  cursor: pointer;
+  background-color: white; /* Thêm nền để nó trông như một card */
+  border-radius: 12px; /* Bo tròn góc của card */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Thêm đổ bóng nhẹ */
+  overflow: hidden; /* Đảm bảo hình ảnh bo tròn góc theo card */
+  display: flex; /* Biến collection thành flex container */
+  flex-direction: column; /* Xếp ảnh và info theo cột */
+}
+
+.collection img {
+  width: 100%;
+  height: 180px; /* Đặt chiều cao CỐ ĐỊNH cho ảnh để chúng đồng đều */
+  object-fit: cover;
+  /* border-radius: 16px; */ /* Bỏ border-radius ở đây vì nó sẽ được xử lý bởi overflow: hidden; của .collection */
+  border-radius: 12px 12px 0 0; /* Bo tròn chỉ góc trên của hình ảnh */
+}
+
+.collectionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px; /* Thêm padding cho nội dung info */
+  flex-grow: 1; /* Cho phép phần info giãn nở nếu có nhiều text */
+}
+
+.collectionInfo h1 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333; /* Màu chữ đậm hơn */
+  margin: 0; /* Bỏ margin mặc định của h1 */
+}
+
+.collectionInfo span {
+  color: gray;
+  font-size: 13px;
+  margin: 0; /* Bỏ margin mặc định của span */
+}
