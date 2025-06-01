@@ -15,7 +15,7 @@ export default function GalleryItem({item}) {
               transformation={[{ width: 375}]}
               loading="eager"
           />
-      <Link to={`/pin/${item.id}`} className='overlay' ></Link>
+      <Link to={`/pin/${item._id}`} className='overlay'></Link>
       <button className="saveButton">Save</button>
       <div className="overlayIcons">
         <button>
